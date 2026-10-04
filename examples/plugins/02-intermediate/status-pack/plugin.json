@@ -1,0 +1,7 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "status-pack",
+  "version": "1.0.0",
+  "description": "用两份 skill 加一个 MCP 入口演示流程和工具怎么拆开。",
+  "license": "Apache-2.0"
+}

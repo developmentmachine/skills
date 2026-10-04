@@ -1,0 +1,4 @@
+#!/bin/sh
+# 分享用占位进程。它不会说 MCP。
+echo "reports-plugin: bin/validate 是占位进程，不是 MCP 服务。" >&2
+exit 1

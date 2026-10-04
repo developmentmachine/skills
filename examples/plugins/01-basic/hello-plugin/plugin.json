@@ -1,0 +1,5 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "hello-plugin",
+  "description": "一份用于演示最小插件的打招呼 skill。"
+}

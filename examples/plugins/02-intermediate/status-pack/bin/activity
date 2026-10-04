@@ -1,0 +1,5 @@
+#!/bin/sh
+# 分享用占位进程。它不会说 MCP。
+# 符合规范的客户端应把这条 server 记为连接失败，并继续加载 skills/。
+echo "status-pack: bin/activity 是占位进程，不是 MCP 服务。" >&2
+exit 1

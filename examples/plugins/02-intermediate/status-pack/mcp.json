@@ -1,0 +1,11 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/mcp.schema.json",
+  "mcpServers": {
+    "activity": {
+      "type": "stdio",
+      "command": "./bin/activity",
+      "args": ["--data", "${PLUGIN_DATA}/activity"],
+      "cwd": "${PLUGIN_ROOT}"
+    }
+  }
+}
