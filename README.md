@@ -1,8 +1,14 @@
-# Skills 与 Plugin 分享素材
+# Agent 分享课程素材
 
-两期材料。第一期讲怎么用 skill 让 agent 按指定做法做事，并用对照证明它照做了。第二期讲 Plugin：怎么把 skill 和 MCP 打成可安装的包，按基础、进阶、高级使用来讲。
+三套相互独立的材料：
 
-第一期对齐这四份公开说明，外加格式规范：
+- [Agent 最佳实践](agent-best-practices/README.md)：60 分钟主课。讲目标、上下文、行动、验证与沉淀。
+- Skill 专题：本目录的 `01-大纲.md` 至 `08-跨工具技能目录.md`。讲怎么编写、触发和验证 skill。
+- [Plugin 专题](plugin/README.md)：把 skill 和 MCP 打成可安装的包。
+
+建议先讲 Agent 最佳实践。Skill 是「流程已经跑通之后怎样沉淀」的专题，Plugin 是「怎样打包分发」的后续专题。
+
+Skill 专题对齐这四份公开说明，外加格式规范：
 
 - [Agent Skills 开放标准](https://agentskills.io/home)
 - [格式规范](https://agentskills.io/specification)
@@ -12,12 +18,13 @@
 
 建议时长 **50 分钟讲解 + 10 分钟练习**。听众用过对话式 agent，没写过 skill。前 20 分钟是定义、简单、复杂，在第 3–5 页。对照演示在第 8 页。平台差异不投影。
 
-第二期材料在 [plugin/](plugin/README.md)。建议另开 **45 分钟**，听众已经听过第一期，或至少写过一份 `SKILL.md`。
+Plugin 专题建议另开 **45 分钟**，听众已经听过 Skill 专题，或至少写过一份 `SKILL.md`。
 
 ## 怎么用
 
 | 文件 | 用途 |
 | --- | --- |
+| [agent-best-practices/](agent-best-practices/README.md) | Agent 最佳实践主课。独立的大纲、幻灯、讲稿、一页纸、练习和演示仓库 |
 | [01-大纲.md](01-大纲.md) | 时间盒、段落目标、可删内容 |
 | [02-幻灯提纲.md](02-幻灯提纲.md) | 投影页。每页只有听众该看见的句子 |
 | [03-讲稿.md](03-讲稿.md) | 口播。页码与幻灯提纲对齐 |
@@ -43,7 +50,7 @@
 | [plugin/](plugin/README.md) | 第二期。Plugin 的基础、进阶、高级使用 |
 | `examples/plugins/` | 三个插件包，分别对应三档使用 |
 
-## 建议议程
+## Skill 专题建议议程
 
 | 时间 | 幻灯 | 内容 |
 | --- | --- | --- |
