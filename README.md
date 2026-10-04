@@ -24,6 +24,7 @@
 | [04-一页纸.md](04-一页纸.md) | 会后带走。定义、分工、怎样算照做了 |
 | [05-平台对照.md](05-平台对照.md) | 备查。标准、Claude、ChatGPT、Cursor 的落地差异。主线不投影 |
 | [06-写作清单.md](06-写作清单.md) | 备查。description、篇幅、自由度、反例。主线不投影 |
+| [08-跨工具技能目录.md](08-跨工具技能目录.md) | 备查。哪些 agent 读 `~/.agents/skills/`，开源的按源码核对。主线不投影 |
 | [07-现场练习.md](07-现场练习.md) | 主持人对照演示，以及最后 10 分钟练习 |
 | [examples/](examples/) | 简单：`pr-description/` 只有 `SKILL.md`。复杂：`commit-digest/` 带脚本和参考 |
 
@@ -31,7 +32,7 @@
 
 ## 示例
 
-`examples/` 放在本目录下，**不会被 Cursor 自动发现**。Cursor 只从 `.cursor/skills/`、`.agents/skills/` 以及用户目录 `~/.cursor/skills/`、`~/.agents/skills/` 加载。
+`examples/` 放在本目录下，**不会被 Cursor 自动发现**。Cursor 从 `.cursor/skills/`、`.agents/skills/` 以及用户目录 `~/.cursor/skills/`、`~/.agents/skills/` 加载，另外兼容 Claude 和 Codex 的同名目录。其他 agent 读哪些目录见 [08-跨工具技能目录.md](08-跨工具技能目录.md)。
 
 现场若要演示自动触发，把其中一个示例复制到项目的 `.cursor/skills/` 再开一轮对话。只投影文件内容时，留在 `examples/` 即可。
 
