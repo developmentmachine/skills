@@ -32,7 +32,11 @@ Skill、MCP、memory 的边界在第一期第 7 页。这期默认已经讲过�
 
 ## 三档示例
 
-这些目录**不会**被 Cursor 当成 skill 自动加载，也还不是接到真实服务的插件。现场用它们讲目录。`status-pack` 里的进程会故意退出，用来演示「MCP 连不上时，skill 仍然保留」。
+这些目录不会被 Cursor 当成 skill 自动加载。现场用它们讲目录。
+
+`hello-plugin` 是最小合法包：一份 `plugin.json` 加一份 skill，没有 MCP。
+
+`status-pack` 和 `reports-plugin` 是结构演示，不能拿来证明安装后能取到数据。`status-pack` 的 `bin/activity` 会故意退出，用来演示「MCP 连不上时，skill 仍然保留」。`reports-plugin` 的 `bin/validate` 同样会故意失败；`https://mcp.example.com/mcp` 不是这门课的服务。
 
 | 档 | 目录 | 使用场景 |
 | --- | --- | --- |
