@@ -1,6 +1,8 @@
 # Plugin 分享素材
 
-第二期。讲 Agent Plugin：把一份或多份 skill，以及可选的 MCP 服务，打成一份可安装的目录。
+第二期。讲 Agent Plugin：带标准根 manifest 的自包含目录，可携带 skill、MCP 配置和客户端扩展。组件可以没有；需要交付实际能力时，再加入对应的 skill 或服务。
+
+本讲统一使用标准根 `plugin.json`，OpenAI 展示信息写入 `extensions.com.openai`，不教第二套兼容布局。
 
 听众离开时要能判断三件事：这份东西该停在单个 skill，还是要打成插件；插件里 skill 和 MCP 各写什么；哪些能力属于可移植包，哪些只属于某一个客户端。
 
@@ -15,7 +17,7 @@ Skill、MCP、memory 的边界在第一期第 7 页。这期默认已经讲过�
 - [OpenAI：打包插件](https://developers.openai.com/plugins/build/plugins)
 - [Google：Agent Plugins 说明](https://developers.googleblog.com/agent-plugins-package-your-skills-tools-and-more/)
 
-规范只规定包长什么样。安装按钮、市场、权限和沙箱由各客户端自己做。本讲的「使用」以 ChatGPT 与 Codex 已经公开的装法和调用法为例，包格式以规范为准。
+规范规定包结构、组件发现、加载和失败边界。安装按钮、市场、权限和沙箱由各客户端自己做。本讲的「使用」以 ChatGPT 与 Codex 已经公开的装法和调用法为例，包格式以规范为准。
 
 ## 怎么用
 
@@ -34,13 +36,13 @@ Skill、MCP、memory 的边界在第一期第 7 页。这期默认已经讲过�
 
 这些目录不会被 Cursor 当成 skill 自动加载。现场用它们讲目录。
 
-`hello-plugin` 是最小合法包：一份 `plugin.json` 加一份 skill，没有 MCP。
+`hello-plugin` 是最小 Skill 插件示例：一份 `plugin.json` 加一份 skill，没有 MCP。只包含合法 `plugin.json`、没有任何组件的目录也符合格式，但不提供任务能力；只带 MCP 的插件同样合法。
 
 `status-pack` 和 `reports-plugin` 是结构演示，不能拿来证明安装后能取到数据。`status-pack` 的 `bin/activity` 会故意退出，用来演示「MCP 连不上时，skill 仍然保留」。`reports-plugin` 的 `bin/validate` 同样会故意失败；`https://mcp.example.com/mcp` 不是这门课的服务。
 
 | 档 | 目录 | 使用场景 |
 | --- | --- | --- |
-| 基础 | `examples/plugins/01-basic/hello-plugin/` | 一份 skill 需要被安装、分享时，最小合法包 |
+| 基础 | `examples/plugins/01-basic/hello-plugin/` | 一份 skill 需要被安装、分享时，最小 Skill 插件示例 |
 | 进阶 | `examples/plugins/02-intermediate/status-pack/` | 多份 skill 配一个 MCP 入口，流程和工具分开 |
 | 高级 | `examples/plugins/03-advanced/reports-plugin/` | 版本与元数据、两种传输、客户端扩展目录 |
 

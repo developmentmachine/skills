@@ -1,10 +1,10 @@
 # 三档插件示例
 
-现场打开目录即可。`hello-plugin` 是最小合法包。`status-pack` 和 `reports-plugin` 不必安装，也不能当成已经联调的插件。
+现场打开目录即可。`hello-plugin` 是最小 Skill 插件示例。仅有合法 manifest 的空包也符合格式，但不提供任务能力。`status-pack` 和 `reports-plugin` 不必安装，也不能当成已经联调的插件。
 
 | 目录 | 档 | 看什么 |
 | --- | --- | --- |
-| `01-basic/hello-plugin/` | 基础 | 最小 `plugin.json` + 一份 skill |
+| `01-basic/hello-plugin/` | 基础 | 标准根 `plugin.json` + 一份 skill |
 | `02-intermediate/status-pack/` | 进阶 | 两份 skill、一份 `mcp.json`、失败的占位进程 |
 | `03-advanced/reports-plugin/` | 高级 | 元数据、两种传输声明、反向域名扩展 |
 

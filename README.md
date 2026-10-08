@@ -4,7 +4,7 @@
 
 - [Agent 最佳实践](agent-best-practices/README.md)：60 分钟主课。讲目标、上下文、行动、验证与沉淀。
 - Skill 专题：本目录的 `01-大纲.md` 至 `08-跨工具技能目录.md`。讲怎么编写、触发和验证 skill。
-- [Plugin 专题](plugin/README.md)：把 skill 和 MCP 打成可安装的包。
+- [Plugin 专题](plugin/README.md)：用标准 manifest 打包可选的 skill 和 MCP 配置，并区分包格式与客户端安装。
 
 建议先讲 Agent 最佳实践。Skill 是「流程已经跑通之后怎样沉淀」的专题，Plugin 是「怎样打包分发」的后续专题。
 
