@@ -21,13 +21,13 @@ python3 -m unittest discover -s tests -v
 AGENTS.md             项目级环境、边界和默认验收
 src/AGENTS.md         源码目录的实现约束
 tests/AGENTS.md       测试目录的约束
-CLAUDE.md             Claude Code 入口，引用 @AGENTS.md
+CLAUDE.md             Claude Code 兼容入口，引用 @AGENTS.md
 .gemini/settings.json 让 Gemini CLI 读取 AGENTS.md
 issue.md              当前任务的事实、目标、范围和非目标
 instruction-evals.md  规则文件变更后的行为回归案例
 ```
 
-Codex、Cursor、Hermes 和 GitHub Copilot 可以直接使用项目 `AGENTS.md`，但嵌套文件的发现时机和覆盖方式并不完全相同。Gemini CLI 使用示例中的配置接入。Claude Code 通过 `CLAUDE.md` 引入根规则。
+Codex、Cursor、Hermes 和 GitHub Copilot 可以直接使用项目 `AGENTS.md`，但嵌套文件的发现时机和覆盖方式并不完全相同。Gemini CLI 使用示例中的配置接入。Claude Code v2.1.277 起支持直接读取 `AGENTS.md`，默认是否加载取决于项目中的 Claude 专属规则文件和 `Project instructions` 设置。本示例保留 `CLAUDE.md`，因此默认通过 `@AGENTS.md` 引入根规则；`src/` 和 `tests/` 的目录级规则需另行确认加载，不能从根规则的导入推断它们也已自动加载。
 
 演示前应使用当前产品提供的上下文查看方式确认实际加载结果。不能查看时，让 Agent 明确读取这些文件，并说明这是显式读取，不是假装宿主已经自动加载。
 
